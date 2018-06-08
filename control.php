@@ -4,7 +4,7 @@ session_start();
 
 function generateToken()
 {
-return setcookie("csrf", base64_encode(openssl_random_pseudo_bytes(32)), time() + 3600, "/");
+return setcookie("csrf", base64_encode(openssl_random_pseudo_bytes(32)), time() + 3600, "/","localhost");
 }
 
 function checkToken( $token)
